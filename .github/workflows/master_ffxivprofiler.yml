@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2.5.3
+      - uses: actions/checkout@v2
 
       - name: Set up Python version
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.11'
+          python-version: '3.9'
       - name: Setup Node.js
-        uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v2
         with:
           node-version: '16.x'
       - name: Create and start virtual environment
@@ -33,15 +33,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+      # # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
-      - name: Upload artifact for deployment jobs
-        uses: actions/upload-artifact@v2
-        with:
-          name: python-app
-          path: |
-            . 
-            !venv/
+      # - name: Upload artifact for deployment jobs
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: python-app
+      #     path: |
+      #       . 
+      #       !venv/
 
   deploy:
     runs-on: ubuntu-latest
