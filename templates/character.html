@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ data['Character']['Name'] }} - Character Profile</title>
+    <title>{{ character_name }} - {{ server }} Character Profile</title>
 </head>
 <body>
-    <h1>{{ data['Character']['Name'] }}</h1>
-    <h2>{{ data['Character']['Server'] }}</h2>
-    <p>{{ data['Character']['ActiveClassJob']['Name'] }}</p>
+    <h1>Character Profile</h1>
+    <p>Name: {{ character_name }}</p>
+    <p>Server: {{ server }}</p>
+    <p>ID: {{ character_id }}</p>
     <h3>Class Jobs</h3>
-    <ul>
-      {% for job in data['Character']['ClassJobs'] %}
-        <li>{{ job['Name'] }}</li>
-      {% endfor %}
-    </ul>
+
 </body>
 </html>
