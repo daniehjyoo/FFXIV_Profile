@@ -1,45 +1,15 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FFProfiler</title>
-    <link rel="stylesheet" href="./resources/css/main.css">
-</head>
-<body>
-    <div class="header">
-        <ul class="left-links">
-            <div class="header-logo">
-                <img src="./resources/images/logo.png" alt="Logo for the game FFXIV">
-                <li>Eorza Weekly</li>
-            </div>
-        </ul>
-        <ul class="right-links">
-            <li class="about"><a href="#">About</a></li>            
-            <li class="classes"><a href="#">Classes</a></li>
-        </ul>
-    </div>
-    <div class="hero-content">
-        <div class="hero-container">
-            
-        </div>
-    </div>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/resources/css/main.css">
     <title>FFXIV Profiler</title>
 </head>
 <body>
     <div class="header">
         <ul class="left-links">
             <div class="header-logo">
-                <img src="./static/images/logo.png" alt="Logo for the game FFXIV">
+                <img src="/static/images/logo.png" alt="Logo for the game FFXIV">
                 <li>Eorza Weekly</li>
             </div>
         </ul>
@@ -50,12 +20,11 @@
             <li class="download"><a href="#">Download</a></li>
         </ul>
     </div>
-
     <div class="hero-content">
         <div class="hero-container">
             <div class="hero-text">
                 <div class="hero-title">Welcome to the world of Eorza.</div>
-                <form action="{{ url_for('character_profile', character_id)}}" method="POST">
+                <form action="/" method="POST">
                     <label for="name">Name: </label>
                     <input type="text" id="name" name="name"><br>
                     <label for="server">Server:</label>
