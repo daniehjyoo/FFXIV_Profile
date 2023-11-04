@@ -5,10 +5,10 @@
 # api_key = secretskeys.API_KEY
 # app = Flask(__name__)
 
-name = "Ringo Pan"
-server = "Cerberus"
+#name = "Ringo Pan"
+#server = "Midgardsormr"
 # #Make a request to retrieve char data
-character_id=40117682
+#character_id=40117682
 # #Parse the JSON Response
 # #data = json.loads(response.text)
 # #data = response.json()
@@ -46,12 +46,13 @@ character_id=40117682
 # if __name__ == '__main__':
 #     app.run()
 
-
-import secretskeys
+import os
+from dotenv import load_dotenv
 import requests
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 
-api_key = secretskeys.API_KEY
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
 app = Flask(__name__)
 
 @app.route('/', methods=['GET','POST'])
@@ -59,8 +60,10 @@ def get_character():
     if request.method == 'POST':
         name = request.form['name']
         server = request.form['server']
-        response = requests.get(f"https://xivapi.com/character/search?name={name}&server={server}&private_key={api_key}")
+        response = requests.get(f"https://xivapi.com/character/search?name={name}&server={server}&private_key={API_KEY}")
+        #response = requests.get(f"https://xivapi.com/character/search?name=Ringo+Pan&server=Midgardsormr")
         data = response.json()
+        print(data)
         if response.status_code == 200 and data['Pagination']['Results'] > 0:
             character_id = data['Results'][0]['ID']
             return redirect(url_for('character_profile', character_id=character_id))
@@ -69,7 +72,7 @@ def get_character():
 
 @app.route('/profile/<int:character_id>')
 def character_profile(character_id):
-    url = f'https://xivapi.com/character/{character_id}?private_key={api_key}'
+    url = f'https://xivapi.com/character/{character_id}?private_key={API_KEY}'
     response = requests.get(url)
     data = response.json()
     character_name = data['Character']['Name']
