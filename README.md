@@ -15,7 +15,6 @@ The webapp can be hosted locally and is dockerized to be put onto a cloud servic
 
 # In the current version:
 ## HOW TO RUN:
-
 + Obtain an API Key:
     + Go to <https://xivapi.com/>
 
@@ -31,8 +30,7 @@ The webapp can be hosted locally and is dockerized to be put onto a cloud servic
     + docker run -p 80:5000 dev
 
 ## HOW TO USE:
-
-    + On the username search bar, input a characters name you wish to find.
-    + On the world search bar, input the world that character resides in.
-    + A great test search would be Yoshi'p Sampo (Character name) of Aegis (World). He is the creator and developer of the game after all!
-    + Enjoy the page!
++ On the username search bar, input a characters name you wish to find.
++ On the world search bar, input the world that character resides in.
++ A great test search would be Yoshi'p Sampo (Character name) of Aegis (World). He is the creator and developer of the game after all!
++ Enjoy the page!
