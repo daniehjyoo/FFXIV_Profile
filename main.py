@@ -80,4 +80,5 @@ def character_profile(character_id):
     return render_template('profile.html', character_name=character_name, server=server, character_id=character_id)
 
 if __name__ == '__main__':
-    app.run()
+    #currently runs on localhost | change it later??
+    app.run(host='0.0.0.0')
