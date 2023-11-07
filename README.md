@@ -16,19 +16,19 @@ The webapp can be hosted locally and is dockerized to be put onto a cloud servic
 # In the current version:
 ## HOW TO RUN:
 
-    + Obtain an API Key:
-        > Go to <https://xivapi.com/>
++ Obtain an API Key:
+    + Go to <https://xivapi.com/>
 
 
-    + Install Dependecies:
-        > pip install -r requirements.txt
++ Install Dependecies:
+    + pip install -r requirements.txt
 
     
 
-    + HOW TO USE THIS:
-        > On command line, run main.py with the python command\
++ HOW TO USE THIS:
+    + On command line, run main.py with the python command\
 
-        > docker run -p 80:5000 dev
+    + docker run -p 80:5000 dev
 
 ## HOW TO USE:
 
