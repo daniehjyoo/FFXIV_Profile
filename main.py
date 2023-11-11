@@ -75,6 +75,7 @@ def character_profile(character_id):
     url = f'https://xivapi.com/character/{character_id}?private_key={API_KEY}'
     response = requests.get(url)
     data = response.json()
+    print(data)
     character_name = data['Character']['Name']
     server = data['Character']['Server']
     return render_template('profile.html', character_name=character_name, server=server, character_id=character_id)

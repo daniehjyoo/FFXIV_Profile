@@ -5,7 +5,7 @@ html {
     font-family: Roboto, sans-serif;
     overflow: hidden;
     color: white;
-    background: url(../static/images/logo.png) no-repeat center center fixed, rgb(40, 40, 71);
+    background: url(../images/logo.png) no-repeat center center fixed, rgb(40, 40, 71);
     height: 100%;
     width: 100%;
 }
