@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,5 +11,25 @@
     <p>ID: {{ character_id }}</p>
     <h3>Class Jobs</h3>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ character_name }} - {{ server }} Character Profile</title>
+</head>
+<body>
+    <h1>Character Profile</h1>
+    <p>Name: {{ character_data.Character.Name }}</p>
+    <p>Server: {{ server }}</p>
+    <p>ID: {{ character_id }}</p>
+    <h3>Class Jobs</h3>
+    <ul>
+        {% for Jobs in character_data.Character.ClassJobs %}
+        <li> {{Jobs.Name}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

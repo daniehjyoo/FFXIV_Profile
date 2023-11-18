@@ -48,7 +48,7 @@
 
 import os
 from dotenv import load_dotenv
-import requests
+import requests, json
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 
 load_dotenv()
@@ -76,10 +76,21 @@ def character_profile(character_id):
     response = requests.get(url)
     data = response.json()
     print(data)
+    #character_name = data['Character']['Name']
+    #server = data['Character']['Server']
+    return render_template('profile.html', character_data=data)
+
+"""
+@app.route('/profile/<int:character_id>')
+def character_profile(character_id):
+    url = f'https://xivapi.com/character/{character_id}?private_key={API_KEY}'
+    response = requests.get(url)
+    data = response.json()
+    print(data)
     character_name = data['Character']['Name']
     server = data['Character']['Server']
-    return render_template('profile.html', character_name=character_name, server=server, character_id=character_id)
-
+    return render_template('profile.html', character_name=character_name, server=server, character_id=character_id) 
+"""
 if __name__ == '__main__':
     #currently runs on localhost | change it later??
     app.run(host='0.0.0.0')
