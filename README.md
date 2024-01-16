@@ -1,5 +1,9 @@
 # FFXIV_Profiler
 
+## Current Status
++ The webapp can be hosted locally and is dockerized to be put onto a cloud service like AWS/Azure and have it live hosted.
++ Due to unreliability of the API library used, the project will be created anew with Golang as the base to utilize a opensourced scraper library based on Go and implement a more reliable API
+
 ## This is the basis of creating a FFXIV Profiler.
 The goal is to display: 
 + [ ] Completiton rates
@@ -10,9 +14,7 @@ The goal is to display:
 + and more...
 In a nice view manner or have customizable pages in the future.
 
-## Current Status
-+ The webapp can be hosted locally and is dockerized to be put onto a cloud service like AWS/Azure and have it live hosted.
-+ Due to unreliability of the API library used, the project will be created anew with Golang as the base to utilize a opensourced scraper library based on Go and implement a more reliable API
+
 
 # In the current version:
 ## HOW TO RUN:
